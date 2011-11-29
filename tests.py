@@ -1,5 +1,5 @@
 
-from piip import pobject, pattributes, perror, no_such_attribute, failure
+from piip import pobject, attributes, perror, no_such_attribute, failure
 
 
 def test_can_extend_pobj():
@@ -45,7 +45,7 @@ def test_can_get_only_my_attributes():
     my_o2 = my_o.new()
     my_o2.vrrf = 6
 
-    assert pattributes(my_o2) == dict(vrrf=6)
+    assert attributes(my_o2) == dict(vrrf=6)
 
 
 def test_can_get_my_prototype():
@@ -105,3 +105,5 @@ def test_can_raise_and_catch_piip_errors_with_kwarg():
         ok = True
     except:
         assert False
+    assert ok
+
